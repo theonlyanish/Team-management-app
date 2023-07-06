@@ -1,0 +1,46 @@
+.container{
+    box-sizing: border-box;
+    background-color: rgb(90, 135, 164);
+    font-family: Arial, sans-serif;
+    border: 2px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.btn{
+    margin: 5px;
+}
+
+.form-select{
+    padding: 10px;
+}
+
+#titleOpenInput{
+    height: 40px;
+    font-size: 25px;
+    margin: 10px;
+    width: 60%;
+}
+
+.comments{
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 2px;
+    border-radius:10px ;
+}
+
+.comment{
+    padding-left:5px;
+    flex: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#commentDisplay{
+    max-height: 120px;
+    border-color: black;
+    overflow-y: auto;
+
+}
+

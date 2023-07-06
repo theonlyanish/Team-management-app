@@ -1,0 +1,68 @@
+    <!--MAKE THIS A FORM-->
+<div class="container">
+    <div class="row">
+        <input id="titleInput" type="text" placeholder="Enter Title...">
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <label for="memberToggle">Choose Members:</label>
+            <div>
+                <select name = "memberToggle" class="form-select"> <!-- Memebers needs to be loaded here and value need to be memeber ID-->
+                    <option value="TO DO">Charles</option>
+                    <option value="DOING">Anish</option>
+                    <option value="DONE">Eric</option>
+                </select>
+            </div>
+            <pre></pre>
+            <button type="button" class="btn btn-primary">Add Member</button>
+        </div>
+    </div>
+    <div class="row">
+        <!--Memebers will be displayed here-->
+    </div>
+    <hr> <!-- The Divider Line-->
+    <div class="row">
+        <div class="col-8">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Description</label>
+                <textarea class="form-control" id="descriptionInput" placeholder="Add more detailed description..." rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Activity</label>
+                <textarea class="form-control" id="commentbox" placeholder="Add a comment..." rows="1"></textarea>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" disabled="true">Add Comment</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <form class="mb-3">
+                <label for="link" class="form-label">Attach Link</label>
+                <input type="text"  id="thelink" class="form-control" placeholder="Enter URL...">
+            </form>
+            <div class="col-auto">
+                <button type="submit"  disabled="true" class="btn btn-primary mb-3">Add Link</button>
+            </div>
+        </div>
+    </div>
+    <!--LOOK INTO THIS AND CHANGE THE VALUES OF OPTIONS AND SELECT-->
+    <div class="row">
+        <div class="col-4">
+            <label for="cardtoggle">Choose the Category:</label>
+            <div class="Move toggle">
+                <select name = "cardtoggle" class="form-select" id = "cardStatusSelect">
+                    <option value="To Do" selected>To Do</option>
+                    <option value="Doing">Doing</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div style="text-align: right;">  
+            <button type="submit" class="btn btn-primary mb-3" routerLink="/home" routerLinkActive="active" (click)="saveCard()">Save Card</button>
+            <button type="submit" class="btn btn-primary mb-3" style="background-color: red; border-color: red;" routerLink="/home" routerLinkActive="active">Close Card</button>
+        </div>
+    </div>
+</div>

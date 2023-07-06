@@ -1,0 +1,17 @@
+.container{
+    box-sizing: border-box;
+    background-color: rgb(90, 135, 164);
+    font-family: Arial, sans-serif;
+    border: 2px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+}
+
+.CategoryTitle{
+    text-align: center;
+    padding: 5px;
+    font-size: 30px;
+}

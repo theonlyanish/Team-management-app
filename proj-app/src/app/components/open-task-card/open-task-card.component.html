@@ -1,0 +1,96 @@
+    <!--MAKE THIS A FORM-->
+    <div class="container">
+        <div class="row">
+            <input id="titleOpenInput" type="text" placeholder="Enter Title..." defaultValue="{{title}}">
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <label for="memberToggle">Choose the Category:</label>
+                <div>
+                    <select name = "memberToggle" class="form-select"> <!-- Memebers needs to be loaded here-->
+                        <option value="">Charles</option>
+                        <option value="">Anish</option>
+                        <option value="">Eric</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary">Add Member</button>
+            </div>
+        </div>
+        <pre></pre>
+        <div class="row">
+            <!--Memebers will be displayed here-->
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="mb-3">
+                    <label for="descriptionOpenInput" class="form-label">Description</label>
+                    <textarea class="form-control" id="descriptionOpenInput" placeholder="Add more detailed description..." rows="3">{{description}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Activity</label>
+                    <textarea class="form-control" id="commentbox" placeholder="Add a comment..." rows="1"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3" (click)="addComment()">Add Comment</button>
+                </div>
+                <div id="commentDisplay"> <!--Display comment here-->
+                    <div *ngFor="let comment of comments" class = "comments">
+                        <div class = 'comment'>{{comment.com}}</div>
+                        <div style="text-align: right;">
+                            <button type="button" class="btn btn-secondary" (click)="deleteComment(comment.id)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <form class="mb-3">
+                    <label for="link" class="form-label">Attach Link</label>
+                    <input type="text"  id="thelink" class="form-control" placeholder="Enter URL...">
+                </form>
+                <p>
+                    <a href={{the_link}}>{{the_link}}</a>
+                </p>
+                <div class="col-auto">
+                    <button type="submit" (click)="addLink()" class="btn btn-primary mb-3">Add Link</button>
+                </div>
+                <div>
+                    <!--Previous Attachments will be diplayed here-->
+                    <p>
+                        <a href={{the_link}}>My Link</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--LOOK INTO THIS AND CHANGE THE VALUES OF OPTIONS AND SELECT-->
+        <pre></pre>
+        <div class="row">
+            <div class="col-4">
+                <label for="cardtoggle">Choose the Category:</label>
+                <div class="Move toggle">
+                    <select name = "cardtoggle" class="form-select" id = "cardMove">
+                        <option hidden=true value="{{status}}">{{status}}</option>
+                        <option value="TO DO">TO DO</option>
+                        <option value="DOING">DOING</option>
+                        <option value="DONE">DONE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- <div>
+            <div class = "col-4">
+                <button type="button" class="btn btn-primary" (click)="moveCard()">Move</button>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div style="text-align: right;">  
+                <button type="submit" class="btn btn-primary mb-3" routerLink="/home" routerLinkActive="active" (click)="closeCard()">Close Card</button>
+                <button type="submit" class="btn btn-primary mb-3" style="background-color: red; border-color: red;" routerLink="/home" routerLinkActive="active" (click)="deleteCard()">Delete Card</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class = "row">
+        <div class="col-12">
+            <div class = "CategoryTitle">
+                    TO DO
+            </div>
+        </div>
+    </div>
+    <!-----------One Story Card---------->
+    <div *ngFor="let task of todo_task" class = "row">
+        <div *ngIf=" task.status == 'TO DO'">
+            <pre></pre>
+            <app-story-card [idCard]="task.id" [title]="task.title" [description]="task.description"></app-story-card>
+        </div>
+    </div>
+    <pre></pre>
+    <div style="text-align: left;">
+        <button type="button" class="btn btn-primary" routerLink="/add-card" routerLinkActive="active">Add Card</button>
+    </div>       
+</div>

@@ -1,0 +1,45 @@
+<div id="container">
+  <span class="input">
+    <input type="text" class="input__field" id="nameInput" />
+    <label for="nameInput" class="input__label">
+      <span class="input__label-content">First Name</span>
+  </label>
+  </span> 
+
+  <span class="input">
+    <input type="text" class="input__field" id="emailInput" />
+    <label for="emailInput" class="input__label">
+      <span class="input__label-content">Email Address</span>
+    </label>
+  </span>
+
+  <span class="input">
+    <input type="password" class="input__field" id="passwordInput-1" />
+    <label for="passwordInput-1" class="input__label">
+      <span class="input__label-content">Enter Password</span>
+    </label>
+  </span>
+
+  <span class="input">
+    <input type="password" class="input__field" id="passwordInput-2" />
+    <label for="passwordInput-2" class="input__label">
+      <span class="input__label-content">Re-enter Password</span>
+    </label>
+  </span>
+
+  <button id="send-button" type="button" (click)="onAddUser()">Add User</button>
+
+</div>
+
+<div class="select">
+  Choose member's role
+  <select name="format" id="roleInput">
+     <option value="Programmer">Programmer</option>
+     <option value="Leader">Leader</option>
+     <option value="Client">Client</option>
+
+  </select>
+</div>
+
+<script src="/Projects/proj-app/src/app/components/member-card/member-card.component.js"></script>
+ 
